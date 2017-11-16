@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布依族</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        nav .nav ul li a:hover{
+            cursor: pointer;
+            color: orange;
+        }
+        *{
+            margin:0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            border: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #000000;
+            cursor: pointer;
+        }
+        body{
+            background: #f6f6f6;
+        }
+
+
+        #main{
+            margin-top: 100px;
+            height: 2300px;
+            /*background: #545E64;*/
+        }
+        .main-common{
+            margin:0 auto;
+            width: 1200px;
+        }
+        #main-name{
+            height: 80px;
+        }
+        #main-name h4{
+            color: #111;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 32px;
+            display: block;
+            margin-top: 15px;
+        }
+        #main-name span{
+            font-size: 20px;
+            color: #666;
+            display: block;
+            float: left;
+        }
+
+        #main-navigation{
+            width: 1200px;
+            height: 40px;
+            background: #545E64;
+        }
+        #navigation-one a,#navigation-two a,#navigation-three a{
+            color: white;
+            float: left;
+            margin-left: 20px;
+            /*width: 50px;*/
+            line-height: 40px;
+        }
+        #main-navigation a:hover {
+            color:#FF8400;
+        }
+        .fixed_banner {
+            position: fixed;
+            bottom: 10px;
+            height: 100px;
+            z-index: 10000;
+            display: none;
+        }
+        /*结束导航栏*/
+
+        #main-left{
+            width: 900px;
+            height: 2100px;
+            /*background: #00ccd5;*/
+            float: left;
+            background: white;
+        }
+        #left-one-left{
+            width: 525px;
+            height: 295px;
+            margin-top: 30px;
+            float: left;
+        }
+        #left-one-right{
+            float: left;
+            width: 345px;
+            height: 295px;
+            margin-top: 30px;
+            margin-left: 30px;
+            /*background: #000000;*/
+        }
+        #left-one-left #container{
+            width: 525px;
+            height:295px;
+            position: relative;
+            margin:0 auto;
+            z-index:1;
+        }
+
+        #left-one-left #container #imgs img{
+            display: none;
+        }
+        #left-one-left #container #imgs .selected{
+            display: block;
+        }
+        #left-one-left #container #nav{
+            position: absolute;
+            bottom: 10px;
+            right: 5px;
+            z-index:1;
+        }
+        #left-one-left #container #nav li, #left-one-left #container #arrows div{
+            width: 20px;
+            height: 20px;
+            background: #000000;
+            color: #ffffff;
+            cursor: pointer;
+            text-align: center;
+            line-height: 20px;
+            float: left;
+            margin-right:5px;
+        }
+        #left-one-left #container #nav .selected{
+            background: orange;
+            /*color: #000000;*/
+        }
+        #left-one-left #container #arrows #left{
+            position: absolute;
+            left: 5px;
+            bottom: 140px;
+        }
+        #left-one-left #container #arrows #right{
+            position: absolute;
+            right: 5px;
+            bottom: 140px;
+        }
+        /*轮播图完成*/
+        .title {
+            margin-top: 0;
+            font-size: 24px;
+            font-family: "microsoft yahei";
+            font-weight: 500;
+            color: #111;
+            line-height: 24px;
+        }
+        .main-desc-p{
+            margin-top: 20px;
+            font-weight: 400;
+            /*font-size: 0.8pc;*/
+        }
+        .main-desc-p .click-more-info{
+            color: #0091d9;
+
+        }
+        .main-intro{
+            margin-top: -30px;
+        }
+        .main-besttime{
+            display: block;
+            width: 270px;
+            height: 27px;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        /*main左侧上面完成*/
+
+
+        #main-right{
+            width: 298px;
+            height: 720px;
+            /*background: #00ff00;*/
+            float: left;
+            background: white;
+            margin-top: 10px;
+            border-left: solid #f6f6f6 2px;
+            border-bottom: solid #f6f6f6 2px;
+        }
+
+
+        #right-top{
+            height: 420px;
+            border-bottom: solid #f6f6f6 10px;
+        }
+        #right-top h4,#right-bottom h4{
+            display: block;
+            color: #545E64;
+            height: 50px;
+            line-height: 50px;
+            margin-left: 30px;
+        }
+        #right-top #imgdi{
+            width: 270px;
+            height: 350px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        #right-bottom-bttom{
+            width: 300px;
+            height: 1700px;
+            background: #f6f6f6;
+        }
+
+        /*预定票结束*/
+        #kongbai{
+            width: 900px;
+            height: 370px;
+        }
+        #left-two-introduce{
+            width:900px;
+            height: 1300px;
+            /*background: #000000;*/
+        }
+        #left-two-introduce .v2-sd-title{
+            display: block;
+            background: #f6f6f6;
+            height: 41px;
+            width: 870px;
+            line-height: 41px;
+            margin-left: 10px;
+            padding-left: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 0px;
+        }
+        #left-two-introduce .v2-sd-title img{
+            vertical-align: middle;
+        }
+        #left-two-introduce .ydxz{
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        /*介绍完成*/
+
+        .detail_infor p{
+            padding: 20px;
+            font-family: Cursive;
+            font-size: 20px;
+        }
+        .detail_infor ul li{
+            font-family: Cursive;
+            font-size: 18px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<nav>
+    <div class="name"><a href="">溯&nbsp;游</a></div>
+    <div class="nav" id="a">
+        <ul>
+            <li><a href="index.html" style="text-decoration: none;">首页</a></li>
+            <li><a href="zhuce.html" style="text-decoration: none;">注册</a></li>
+        </ul>
+    </div>
+    <div class="min-nav">
+        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+    </div>
+    <div class="min-nav-main">
+        <ul>
+            <li><a href="index.html" style="text-decoration: none;">首页</a></li>
+            <li><a href="zhuce.html" style="text-decoration: none;">注册</a></li>
+        </ul>
+    </div>
+</nav>
+    <div id="main">
+        <!--<div id="kongbai"></div>-->
+        <div id="main-name" class="main-common">
+            <h4>贵州布依族村寨</h4>
+            <span>guizhoubuyizhuchunzhai</span></div>
+        <div id="main-navigation" class="main-common" class="fixed_banner">
+        </div>
+        <div id="main-introduce" class="main-common">
+            <div id="main-left" >
+                <div id="left-one-left">
+                    <div id="container">
+                        <div id="imgs">
+                            <img src="img/by1.jpg" alt="" class="selected">
+                            <img src="img/by2.jpg" alt="">
+                            <img src="img/by3.jpg" alt="">
+                            <img src="img/by4.jpg" alt="">
+                        </div>
+                        <ul id="nav">
+                            <li class="selected">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                        <div id="arrows">
+                            <div id="left">&lt;</div>
+                            <div id="right">&gt;</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="left-one-right">
+                    <h3 class="title">关于布依族村寨&nbsp;&nbsp;&nbsp;
+                    </h3>
+                    <p class="main-desc-p">
+                        布依族，中国西南部一个较大的少数民族，民族语言为布依语，汉藏语系壮侗语族壮傣语支...
+                        <a class="click-more-info" href="javascript:void(0);" onclick="show();return false;">[详细简介]</a>
+                    </p>
+                    <div class="main-intro">
+                        <span class="main-besttime">地点：贵州布依族村寨</span>
+                        <span class="main-besttime">景点类型：自然保护区</span>
+                        <span class="main-besttime">时间:夏季</span>
+                        <span class="main-besttime">旅行团类型：陌生人组团 有旅行管家</span>
+                    </div></div>
+                <div id="kongbai"></div>
+                <div id="left-two-introduce">
+
+                    <div class="v2_di detail_infor v2-fordfImg fordfImg">
+                        <div class="v2-sd-title"><span>案例详情</span></div>
+                        <div class="ydxz">具体介绍</div>
+                        <div class="v2_di detail_infor v2-fordfImg fordfImg">
+                            <p style="text-indent:32px;line-height:27px;margin-bottom: 10px;margin-left:10px;">
+                                &nbsp; &nbsp;（1）初识
+                                旅友只允许携带基础的个人生活用品，民宿提供日常生活设施，保证民宿简朴、干净整洁、舒适的住宿环境。旅行管家温馨提示民宿期间的注意事项，简述当地的民风民俗。旅行管家带领旅友互相认识，可保密个人真实社会背景，组织做一些素拓活动（如）增进旅行彼此之间的了解，消除陌生感激发大家的积极性，尽快开启旅行模式，为后期开展的活动打下情感基础。
+                                晚上发布旅友要齐心协力举办一个庆祝旅行开始的一个狂欢，公司提供物资支持，考验旅友互相之间的默契，大家快速融合。
+                                让旅友在这样一个特别的狂欢开启旅行，这样有仪式感的开端将会给旅行者不一样的内心体验，对这次旅行有更多的信心和期待。
+                                在这个狂欢夜的最后，旅友需卡片写下旅行期间的小心愿或者要达成的小目标，将所有写好的卡片封存到心愿箱，
+                                到旅行结束一起分享。<br></p>
+                            <p style="text-indent:32px;line-height:27px;margin-bottom: 10px;margin-left:10px;">
+                                （2）体验
+                                在旅行的开始，旅行团需要合作学会在民宿生活的基本技能，公司为旅友提供基本的工具和一定的人民币，他们可以自行进行食材、生活物资的采购，新鲜蔬菜需到菜园里自行采摘。制作食物的过程提供具体操作视频作参考。通过使用原生态的方式做饭，亲自去田地收取新鲜的蔬菜，收获自然的馈赠享受劳动的快乐。参与绿色健康的生活方式，享受回归田园生活的那份简单与闲适。
+                                旅行团可以在提供的物质基础上，可以通过选择任务清单上的活动完成得到相应的钱币兑换更多自己想要换取的东西。
+                            </p>
+                            <br>
+                            <h4>任务清单</h4>
+                            <ul>
+                                <li>1.	山歌对唱，钱币360
+                                    山歌对唱是布依族年轻单生男女一种重要地交友方式，布依族阿哥阿妹借用歌声抒发自己的爱慕之情，常常有很多的俊男美女在山歌对唱中喜结良缘。随着是大爱的发展，山歌对唱的歌曲也发生者变化，传统的山歌对唱中也融入现代歌曲的风格，所以每一个单生旅友完全有机会可以参与其中，一展个人魅力，体验布依族年轻男女对高尚、淳朴、简单爱情的追求，也期待旅友创造美好的回忆。
+                                </li>
+                                <li>2.	布依族婚宴，钱币360
+                                    婚宴向来都是人们一生美好而重要的大事之一，布依族人家的年轻男女也不例外。特别的是布依族的婚宴有着很多有意思的传统婚俗，表达对新人的美好祝福。旅友可以参与婚礼的筹备，相信有很多的意外惊喜。
+                                </li>
+                                <li>3.	野营，钱币120。
+                                    贵州的夏天气温不冷不热，非常适合野营。贵州特殊的地理环境形成特别的自然景观，有很多原生态的景区提供露营的场地和安全保障。贵州的自然环境良好，夏夜可以一起在星空下围在篝火旁边欢歌跳舞。
+                                </li>
+                                <li>4.	为村寨孩子补习，钱币120。
+                                    村寨的教育条件较差，孩子们拥有的教育资源贫乏，甚至没有英语、音乐等课程。旅友可以献出爱心给村寨里的孩子辅导功课，分享更多的故事，拓展他们的视野。如此善行，温暖彼此的夏天。
+                                </li>
+                                <li>5.	约友田坝游，钱币120
+                                    凉爽的夏夜，走到田坝去听听虫叫蛙鸣，呼吸寨子里人家夜来香花开飘散的芬芳。抓几只萤火虫放在南瓜叶的藤茎管中做出原始的荧光棒晚上睡觉放在床头可以做小夜灯，下半夜萤火虫就自己飞走回它自己的家了。这些小活动体验自然给我们带来的快乐，享受少数民族人民简单的幸福。
+                                </li>
+                                <li>6.	挑战项目，钱币600
+                                    这个项目保密内容，可能很简单答一个问题（如：学习一句布依语），也可能挑战特别困难、具有挑战的项目（如：布依族传统的技艺-赤脚踩烧得的滚烫的铁耕犁），这个可以给有冒险精神的旅友，给旅行创造更多的惊喜。
+                                </li>
+                                <li>7.等等......提供更多有创意的特色活动供选择。</li>
+                            </ul>
+                            <p style="text-indent:32px;line-height:27px;margin-bottom: 10px;margin-left:10px;">
+                                旅友可以自由支配民宿里的物品，像一个当地人一样生活。整个旅行期间卸下城市生活里的负担，旅友们互相协作，聆听自然的虫叫蝉鸣，呼吸新鲜的空气，近距离倾尽大自然，与小伙伴们分享自己的心情，谈人生聊理想，尽情享受乡村安逸宁静的生活。在轻松愉快的生活里，体验不一样的生活状态，试着突破原来固有的思维模式和圈子，换一个角度去思考问题会不会有不同，静下来寻觅自己内心的声音，享受生命无限可能性。
+                            </p>
+                            <p style="text-indent:32px;line-height:27px;margin-bottom: 10px;margin-left:10px;">
+                                旅行管家组织星空下的方向，在农家的小院里围成一圈，公开旅友心愿卡，在静谧的乡村夜晚旅友分享旅行日记里的感动，分享自己的故事，分享着美好或遗憾，倾听别人的故事，思考自己人生。最后，送一个临别礼物给所有的旅友——剪辑旅行期间的美好瞬间的视频。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main-right">
+                <div id="right-top">
+                    <h4>旅游地图</h4>
+                    <div id="imgdi"><img src="img2/ditu.jpg" alt=""/></div>
+                </div>
+
+                <div id="right-bottom-bttom">
+
+                </div>
+            </div>
+        </div>
+    </div>
+<!--轮播图js-->
+<script>
+    var oNav = document.getElementById("nav");
+    var aLi = oNav.getElementsByTagName("li");
+    var oImgs = document.getElementById("imgs");
+    var aImg = oImgs.getElementsByTagName("img");
+    var oLeft = document.getElementById("left");
+    var oRight = document.getElementById("right");
+    var oContainer = document.getElementById("container");
+    var nowindex = 0; //保存当前的index
+    var timer;
+    for (var i = 0; i < aLi.length; i++) {
+        aLi[i].index = i;
+        aLi[i].onmousemove = function () {
+            nowindex = this.index;
+            changgeImg();
+        };
+    }
+    oLeft.onclick = oRight.onclick = function () {
+        if (this == oLeft) {
+            nowindex--;
+            if (nowindex == -1) {
+                nowindex = aLi.length - 1;
+            }
+        } else {
+            nowindex++;
+            if (nowindex == aLi.length) {
+                nowindex = 0;
+            } //判断是否越界
+        }
+        changgeImg();
+    };
+    oContainer.onmouseover = function () {
+        clearInterval(timer);
+    };
+    oContainer.onmouseout = function () {
+        play();
+
+    };
+
+    play();
+    function play() {
+        timer = setInterval(function () {
+            oRight.onclick();
+        }, 2000);
+    };
+
+    function changgeImg() {
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].className = "";
+            aImg[i].className = "";
+        }
+        aLi[nowindex].className = "selected";
+        aImg[nowindex].className = "selected";
+    }
+    var isshow = 0;
+    function creatediv() {
+        var msgw, msgh, bordercolor;
+        msgw = 400;//提示窗口的宽度
+        msgh =405;//提示窗口的高度
+        var sWidth, sHeight;
+        if (top.location == self.location)
+            doc = document;
+        var docElement = doc.documentElement;
+        sWidth = docElement.clientWidth;
+        sHeight = docElement.clientHeight;
+        if (docElement.scrollHeight > sHeight)
+            sHeight = docElement.scrollHeight;
+        var bgObj = document.createElement("div");
+        bgObj.setAttribute('id', 'bgDiv');
+        bgObj.style.position = "absolute";
+        bgObj.style.top = "0";
+        bgObj.style.left = "0";
+        bgObj.style.background = "#777";
+        bgObj.style.filter = "progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75";
+        bgObj.style.opacity = "0.6";
+        bgObj.style.width = sWidth + "px";
+        bgObj.style.height = sHeight + "px";
+        bgObj.style.zIndex = "10000";
+        document.body.appendChild(bgObj);
+
+
+        var msgObj = document.createElement("div");
+        msgObj.setAttribute("id", "msgDiv");
+        msgObj.setAttribute("align", "center");
+        msgObj.style.position = "absolute";
+        msgObj.style.left = "50%";
+        msgObj.style.background = "#fff";
+        msgObj.style.marginLeft = "-200px";
+        msgObj.style.top = (document.documentElement.clientHeight / 2 + document.documentElement.scrollTop - 252) + "px";
+        msgObj.style.width = msgw + "px";
+        msgObj.style.height = msgh + "px";
+        msgObj.style.zIndex = "10001";
+        msgObj.style.scrollbars = "yes";
+        msgObj.style.overflow = "auto";
+        msgObj.innerHTML = "九寨沟<br /><br />" + "&nbsp;&nbsp;&nbsp;&nbsp;布依族信仰祖先和多种神灵。山、水、井、洞及生长奇特的古树无不被认为是神灵的化身。各村寨建有土地庙。一些特定的宗教仪式，要供奉神竹。各地布依族还供奉雷神、门神、灶神、龙王等等。这些反映了布依族作为农耕民族的原始宗教信仰。" +
+            "“摩教”是布依族宗教信仰中一个比较成熟的宗教信仰形式，介乎于原始宗教向人为宗教过渡的类型。其宗教职业者分为“布摩”和“摩雅”。布摩是通过学习而成的，在师父的带领下学习一系列的经文和仪式的程序，能够继承师父的衣钵便可出道。布摩尊奉“报陆陀”为开山祖师。在举行各种祭祖活动中，首要的仪式是恭请“报陆陀”莅临，以示整个祭祀活动的权威性。" +
+            "<a href=\"javascript:void(0);\" onclick='delWinD();return false;'><br /><br /><br />点我关闭窗口</a>";
+        document.body.appendChild(msgObj);
+    }
+    function delWinD() {
+        document.getElementById("bgDiv").style.display = "none";
+        document.getElementById("msgDiv").style.display = "none";
+        isshow = 0;
+    }
+    function show() {
+        isshow = 1;
+        if (!document.getElementById("msgDiv"))//小窗口不存在
+            creatediv();
+        else {
+            document.getElementById("bgDiv").style.display = "";
+            document.getElementById("msgDiv").style.display = "";
+            document.getElementById("msgDiv").style.top = (document.documentElement.clientHeight / 2 + document.documentElement.scrollTop - 252) + "px";
+        }
+    }
+</script>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>

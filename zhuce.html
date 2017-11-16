@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        body{
+            background: #f6f6f6;
+        }
+        .login-now{
+            margin-top: 100px;
+            width: 100%;
+        }
+        .login-title,.aboutme{
+            float: left;
+            width: 50%;
+        }
+        .login-title{
+            height: 800px;
+        }
+        .login-main{
+            width: 380px;
+            height: 630px;
+            /*border:2px solid;*/
+            margin:80px auto;
+            background: white;
+        }
+        .aboutme{
+            height: 500px;
+        }
+        .aboutme .aboutme-main{
+            width: 400px;
+            padding: 20px;
+            border-radius: 10%;
+            height: 100%;
+            margin: 100px auto;
+            border: 2px solid #c59a6a;
+        }
+        .aboutme .aboutme-main p,.aboutme .aboutme-main h4{
+            padding: 6px;
+            font-family: Cursive;
+        }
+        .aboutme .aboutme-main p{
+            text-indent: 2em;
+            /*word-spacing: 6px;*/
+            letter-spacing: 2px;
+        }
+        #form-login input[type="text"],#form-login input[type='submit']{
+            /*margin:10px 0;*/
+            height: 60px;
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: lighter;
+            width: 100%;
+            background: #f5f5f5;
+            border: 1px solid #e6e6e6;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        #form-login input[type='submit']{
+            background: #323232;
+            margin-top: 20px;
+            color: white;
+        }
+        #form-login button{
+            height: 60px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: lighter;
+            width: 40%;
+            background: #323232;
+            color: white;
+            border: 1px solid #e6e6e6;
+            border-radius: 4px;
+        }
+        nav .nav ul li a:hover{
+            cursor: pointer;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="name"><a href="">溯&nbsp;游</a></div>
+    <div class="nav" id="a">
+        <ul>
+            <li><a href="index.html" style="text-decoration: none;">首页</a></li>
+            <li><a href="zhuce.html" style="text-decoration: none;">注册</a></li>
+        </ul>
+    </div>
+    <div class="min-nav">
+        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+    </div>
+    <div class="min-nav-main">
+        <ul>
+            <li><a href="index.html" style="text-decoration: none;">首页</a></li>
+            <li><a href="zhuce.html" style="text-decoration: none;">注册</a></li>
+        </ul>
+    </div>
+</nav>
+<section class="login-now">
+    <div class="aboutme">
+        <div class="aboutme-main">
+            <h4>公司目标</h4>
+            <p> 采用线上咨询订购，线下体验享受旅游。 为旅行者提供有特色，有文化底蕴的村落，解决旅友在旅行中的遇到的困难，
+                让旅行者有一个不一样的旅行体验。
+            </p>
+            <p>
+                旅游是体验性极强的商业，注重消费者的参与，体验时的内心感受，对空间和环境的要求也更注重体验性。让消费者脱离原来城市里紧张快节奏的生活，感受宁静乡村的风土人情，
+                亲近大自然，与旅友分享自己的故事，回归最单纯的模样，依然好奇世界，尽情享受生活的美好。
+            </p>
+            <p>
+                轻松游，寻觅另一个自己。做个性化定制的深度旅游，满足旅行者精神诉求，发展成为引领新潮旅游的先行者。
+                树立好良好的品牌形象，成为旅游市场的新锐者，获取有效盈利。
+            </p>
+        </div>
+    </div>
+    <div class="login-title">
+        <div class="login-main">
+            <form id="form-login">
+                <p style="float: right;margin: 20px;padding: 0;">已有账号，请<a href="login.html">登录</a></p><br>
+                <div style="margin-top: 20px;padding: 20px;">
+                    <input type="text"  placeholder="手机号"><br>
+                    <input type="text"  placeholder="邀请码"><br>
+                    <input type="text"  placeholder="验证码" style="width: 50%"><button>获取验证</button><br>
+                    <input type="text"  placeholder="密码"><br>
+                    <input type="text"  placeholder="确认密码"><br>
+                    <input id="legal" type="checkbox">
+                    <label for="legal">我已阅读相关说明并遵守相关法律</label>
+                    <input type="submit" value="登录">
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+<div style="float:left;height: 80px;width: 100%;background: #323232;color: white;text-align: center;line-height: 80px">>
+    Copyright&nbsp;© &nbsp;2017&nbsp;Wang&nbsp;Chen &nbsp;晋ICP备17008832号
+</div>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>
