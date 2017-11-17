@@ -239,6 +239,7 @@ nav .min-nav span{
 }
 .work h5, .work p {
     color: orange;
+    font-size: 20px;
     margin: 0;
     opacity: 0;
 }
