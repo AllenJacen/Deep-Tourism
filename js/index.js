@@ -9,7 +9,7 @@ requirejs.config({
     require(['jquery','carousel'],function($,Carousel){
         $(document).on('selectstart',function(){ return false; });
         var oContainer=document.getElementById('container1');
-        var witha=oContainer.offsetWidth;
+        var witha=oContainer.offsetWidth-115;
         console.log(witha);
         var setting1={
             selecter:'#container1',

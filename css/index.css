@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    font-family: Cursive;
+}
 html{
     font-size: 20px;
 }
@@ -12,7 +14,9 @@ li{
 img{
     border: 0;
 }
+
 nav{
+    font-family: Cursive;
     z-index: 3;
     height: 4rem;
     width: 100%;
@@ -234,7 +238,7 @@ nav .min-nav span{
     transition: all, 0.5s;
 }
 .work h5, .work p {
-    color: #fff;
+    color: orange;
     margin: 0;
     opacity: 0;
 }
@@ -302,7 +306,7 @@ p{
     margin-left:5rem;
 }
 .about-right img{
-    margin-top: 100px;
+    margin-top: 10px;
     width: 300px;
     height: 400px;
 }
@@ -342,22 +346,22 @@ p{
     transition: all, 0.5s;
 }
 #xm1{
-    background-image: url("../img/xm1.jpg");
+    background-image: url("../img/an2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 #xm2{
-    background-image: url("../img/xm2.jpg");
+    background-image: url("../img/an5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 #xm3{
-    background-image: url("../img/xm3.jpg");
+    background-image: url("../img/an3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 #xm4{
-    background-image: url("../img/xm4.jpg");
+    background-image: url("../img/an4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
