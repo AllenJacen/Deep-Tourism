@@ -5,6 +5,51 @@
     <title>注册</title>
     <link rel="stylesheet" href="../css/index.css">
     <style>
+        #container{
+            width: 525px;
+            height:295px;
+            position: relative;
+            margin:0 auto;
+            z-index:1;
+        }
+
+        #container #imgs img{
+            display: none;
+        }
+        #container #imgs .selected{
+            display: block;
+        }
+        #container #nav{
+            position: absolute;
+            bottom: -50px;
+            right: -60px;
+            z-index:1;
+        }
+        #container #nav li,  #container #arrows div{
+            width: 20px;
+            height: 20px;
+            background: #000000;
+            color: #ffffff;
+            cursor: pointer;
+            text-align: center;
+            line-height: 20px;
+            float: left;
+            margin-right:5px;
+        }
+        #container #nav .selected{
+            background: orange;
+            /*color: #000000;*/
+        }
+        #container #arrows #left{
+            position: absolute;
+            left:2px;
+            bottom: 110px;
+        }
+        #container #arrows #right{
+            position: absolute;
+            right: -124px;
+            bottom: 110px;
+        }
         body{
             background: #f6f6f6;
         }
@@ -105,7 +150,22 @@
 <section class="login-now">
     <div class="aboutme">
         <div class="aboutme-main">
-            <img src="../img/login.jpg" alt="">
+            <div id="container">
+                <div id="imgs">
+                    <img src="../img/lo1.jpg" alt="" class="selected">
+                    <img src="../img/lo2.jpg" alt="">
+                    <img src="../img/lo3.jpg" alt="">
+                </div>
+                <ul id="nav">
+                    <li class="selected">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+                <div id="arrows">
+                    <div id="left">&lt;</div>
+                    <div id="right">&gt;</div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="login-title">
@@ -132,5 +192,69 @@
 </div>
 <script src="../js/jquery-1.12.4.js"></script>
 <script src="../js/nav.js"></script>
+<script>
+    var oNav = document.getElementById("nav");
+    var aLi = oNav.getElementsByTagName("li");
+    var oImgs = document.getElementById("imgs");
+    var aImg = oImgs.getElementsByTagName("img");
+    var oLeft = document.getElementById("left");
+    var oRight = document.getElementById("right");
+    var oContainer = document.getElementById("container");
+    var nowindex = 0; //保存当前的index
+    var timer;
+    /*  for(var i= 0;i<NUM;i++){
+          //预加载图片
+          var oThumbsImg=new Image();
+          oThumbsImg.onload=function(){
+              count++;
+              if(count == 3){
+                  loadsuccess();
+              }
+          };*/
+    for (var i = 0; i < aLi.length; i++) {
+        aLi[i].index = i;
+        aLi[i].onmousemove = function () {
+            nowindex = this.index;
+            changgeImg();
+        };
+    }
+    oLeft.onclick = oRight.onclick = function () {
+        if (this == oLeft) {
+            nowindex--;
+            if (nowindex == -1) {
+                nowindex = aLi.length - 1;
+            }
+        } else {
+            nowindex++;
+            if (nowindex == aLi.length) {
+                nowindex = 0;
+            } //判断是否越界
+        }
+        changgeImg();
+    };
+    oContainer.onmouseover = function () {
+        clearInterval(timer);
+    };
+    oContainer.onmouseout = function () {
+        play();
+
+    };
+
+    play();
+    function play() {
+        timer = setInterval(function () {
+            oRight.onclick();
+        }, 2000);
+    };
+
+    function changgeImg() {
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].className = "";
+            aImg[i].className = "";
+        }
+        aLi[nowindex].className = "selected";
+        aImg[nowindex].className = "selected";
+    }
+</script>
 </body>
 </html>

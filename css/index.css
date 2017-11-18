@@ -46,6 +46,14 @@ nav.fixednav{
 nav .name{
     float: left;
 }
+nav .name span{
+    font-size: 12px;
+    height: 20px;
+    float: left;
+    margin-top: -58px;
+    margin-left: 16px;
+    display: inline-block;
+}
 nav .login{
     color: white;
     text-decoration: none;

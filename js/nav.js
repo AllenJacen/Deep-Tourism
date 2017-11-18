@@ -28,6 +28,10 @@ $(function () {
                     top:'50px'
                 }
             );
+            $('nav .name span').css({
+                display:'none'
+                }
+            );
         }else{
             $("nav").removeClass("fixednav");
             $('nav .name').css({
@@ -54,6 +58,10 @@ $(function () {
             });
             $('nav .min-nav-main').css({
                     top:'80px'
+                }
+            );
+            $('nav .name span').css({
+                    display:'inline'
                 }
             );
         }
